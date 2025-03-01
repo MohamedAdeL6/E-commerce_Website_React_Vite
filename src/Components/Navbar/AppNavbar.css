@@ -1,0 +1,463 @@
+:root {
+  --main-color: #ffa500;
+  --scrollbar-width-height: 10px;
+  --bs-body-color: #4782d7;
+}
+
+
+/* ---------------------------------- Style of Navbar  -----------------------------  */
+.Header {
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+}
+.header-page {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px #DDD;
+  padding: 10px 0;
+  z-index: 10;
+  background-color: #fff;
+
+}
+.header-page .container {
+  position: relative;
+  padding-left: .75rem;
+}
+.header-navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  position: relative;
+}
+@media screen and (min-width: 574px) {
+  .header-navbar {
+    gap: 14px;
+  }
+}
+@media screen and (min-width: 1399px) {
+  .header-navbar {
+    gap: 25px;
+  }
+}
+
+
+
+/* ------------------------------------ Style of logo --------------------------------  */
+.header-navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.header-navbar-logo-image .img {
+  max-width: 110px;
+  height: 45px;
+}
+.header-navbar-menu {
+  font-size: 27px;
+  line-height: 1.5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.header-navbar-menu-icon{
+  display: flex;
+}
+@media screen and (min-width: 992px) {
+  .header-navbar-logo {
+   gap: 0;
+  }
+  .header-navbar-menu-icon{
+    display: none;
+  }
+}
+
+
+/* ------------------------------------------------------- */
+
+.menuList.hidden {
+  display: none;
+}
+
+.menuList.active {
+  display: block;
+} 
+
+.menuList {
+  position: absolute;
+  top: 102%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.menuList-container{
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: calc(100vh - 75px);
+  background-color: #fff;
+}
+.menuList .overlay{
+  background-color: hsla(0, 0%, 0%, 0.7);
+}
+@media screen and (min-width: 768px) {
+  .menuList-container{
+    height: calc(100vh - 125px);
+  }
+}
+@media screen and (min-width: 993px) {
+  .menuList{
+    display: none !important;
+  }
+  .menuList-container{
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1099px) {
+  .menuList-container{
+    height: calc(100vh - 132px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menuList-container{
+    width: 35%;
+  }
+}
+
+
+
+/* ------------------------------ Style of form and dropdown ----------------------  */
+.header-navbar-content {
+  display: none;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+.header-navbar-categories-list {
+  cursor: pointer;
+}
+.header-navbar-categories-item {
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+  padding: 12px;
+  transition: 0.5s;
+}
+.header-navbar-categories-item:hover {
+  background-color: #f0f0f0;
+}
+.categories-names {
+  position: absolute;
+  top: 119%;
+  left: 0%;
+  width: 100%;
+  display: none;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+  z-index: 1000;
+  height: calc(100vh - 118px);
+}
+.categories-names-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  height: 100%;
+  z-index: 1000;
+}
+.categories-names.active {
+  display: block;
+}
+.categories-names.hidden {
+  display: none;
+}
+.categories-names-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #DDD;
+  background: #fff;
+  transition: .5s;
+  padding:  0 5px;
+  width: 100%;
+}
+.categories-names-item:hover {
+  background-color: #ddd;
+}
+.categories-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+.categories-item-icon {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 993px) {
+  .header-navbar-content {
+    display: flex;
+    gap: 2px;
+  }
+}
+
+@media screen and (min-width: 1399px) {
+  .header-navbar-content {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+
+/* ------------------------------- Form IN Header ------------------------------- */
+.header-navbar-form {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  border-left: 2px solid #131212;
+  border-right: 2px solid ;
+  border-right-color: #e5e5e5;
+  border-radius: 0.455rem;
+  transition: all .5s;
+  background-color: #e5e5e5;
+  position: relative;
+}
+.header-navbar-form::before,
+.header-navbar-form::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 30%;
+  height: 1px;
+  background-color: #000;
+  transition: all .5s;
+}
+.header-navbar-form::after {
+  top: 0;
+}
+.header-navbar-form::before {
+  bottom: 0;
+}
+.header-navbar-form:hover::after,
+.header-navbar-form:hover::before  {
+  width: calc(100% - 6px);
+}
+.header-navbar-form:hover{
+  border-right-color: #000;
+}
+.header-navbar-form:hover div,
+.header-navbar-form:hover .form-input{
+  background-color: #ddd;
+}
+.header-navbar-form:focus-within {
+  position: static;
+}
+.header-navbar-form:focus-within::before{
+  content: none;
+}
+.header-navbar-form .form-input:focus ~ ::after{
+  content: none;
+}
+ @media screen and (min-width: 993px) {
+  .header-navbar-form{
+    margin: 0 20px;
+    padding: 1px 0;
+  }
+  .header-navbar-form:focus-within {
+    margin: 0;
+    position: relative;
+    border: 1px solid #000;
+  }
+  .header-navbar-form:focus-within:hover{
+    margin: 0;
+    position: relative;
+  }
+  .header-navbar-form:focus-within::before{
+    content: none;
+  }
+  .header-navbar-form:focus-within::after{
+    content: none;
+  }
+} 
+
+/* --------- Input In Form IN Header -------- */
+.header-navbar-form .form-input {
+  height: 35px;
+  width: 100%;
+  background-color: #f7f7f7;
+  border: none;
+  border-top-left-radius: 0.455rem;
+  border-bottom-left-radius: 0.455rem;
+  outline: none;
+  appearance: none;
+  transition: 0.1s;
+  font-size: 17px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.header-navbar-form .form-input:focus {
+  position: absolute;
+  right: -12px;
+  top: -2px;
+  z-index: 1;
+  width: 119%;
+  border: 1px solid #000;
+  border-radius: .455rem;
+  background-color: #fff;
+  padding: 0 14px;
+  height: 48px;
+}
+@media screen and (min-width: 182px) {
+  .header-navbar-form .form-input:focus {
+    right: -12px;
+    width: 117%;
+  }
+}
+@media screen and (min-width: 215px) {
+  .header-navbar-form .form-input:focus {
+    right: -2px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 575px) {
+  .header-navbar-form .form-input:focus {
+    right: -3px;
+    width: 101%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-navbar-form .form-input {
+    height: 40px;
+  }
+  
+}
+@media screen and (min-width: 992px) {
+  .header-navbar-form .form-input {
+    height: 45px;
+  }
+  .header-navbar-form .form-input:focus {
+    position: relative;
+    right: 0;
+    top: 0;
+    border: none;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+  }
+}
+/* ----- Span In Form IN Header ----- */
+.header-navbar-form span {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  z-index: 1;
+  transition: 0.1s;
+  font-size: 0;
+  padding: 0 8px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.header-navbar-form .form-input:focus+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  right: 35px;
+  height: 45px;
+}
+
+@media screen and (min-width: 992px) {
+  .header-navbar-form .form-input:focus+span {
+    right: 40px;
+    height: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+/* ----- Div In Form IN Header ----- */
+.header-navbar-form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  padding: 0 7px;
+  font-size: 18px;
+  background-color: #ededed;
+  border-top-right-radius: .455rem;
+  border-bottom-right-radius: .455rem;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.1s;
+  position: relative;
+}
+.header-navbar-form .form-input:focus ~ div {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  height: 44px;
+  background-color: #fff;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+} 
+@media screen and (min-width: 768px) {
+  .header-navbar-form div {
+    height: 40px;
+  }
+  
+}
+@media screen and (min-width: 992px) {
+  .header-navbar-form div {
+    height: 45px;
+    padding:  0 22px;
+  }
+  .header-navbar-form .form-input:focus ~ div {
+    position: relative;
+    top: 0;
+    right: 0px;
+    height: 48px;
+    border-top-right-radius: .455rem;
+    border-bottom-right-radius: .455rem;
+  }
+}
+
+
+
+/* -------------------------------  Style of Navbar-Cart  -------------------------------  */
+.header-navbar-cart {
+  cursor: pointer;
+}
+.header-navbar-cart-account {
+  display: flex;
+  gap: 45px;
+  line-height: 1.5px;
+}
+
+.header-navbar-account-icon {
+  position: relative;
+  font-size: 30px;
+  text-decoration: none;
+}
+.header-navbar-cart {
+  display: flex;
+}
+.header-navbar-cart-icon {
+  position: relative;
+  font-size: 25px;
+}
+.cart-counter-number {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: -10%;
+  top: -47%;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  font-size: 10px;
+  line-height: 1.7;
+  color: #666;
+}

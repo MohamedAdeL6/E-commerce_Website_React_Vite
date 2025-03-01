@@ -1,0 +1,8 @@
+.box-image-mobile img{
+    height: 55px;
+}
+@media screen and (min-width: 768px) {
+    .box-image-mobile img{
+        height: 100%
+    }  
+}

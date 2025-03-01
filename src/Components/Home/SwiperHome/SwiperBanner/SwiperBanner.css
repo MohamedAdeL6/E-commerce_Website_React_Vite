@@ -1,0 +1,94 @@
+.banner_container {
+	position: relative;
+	padding-bottom: 35px;
+}
+
+.banner_container .swiper {
+	position: static;
+	border-radius: 20px;
+	padding: 8px 0;
+}
+.banner_container .swiper-backface-hidden .swiper-slide{
+	border-radius: 15px;
+}
+
+
+.banner_container .img-box {
+	height: 200px;
+	border-radius: 15px;
+}
+
+.banner_container .swiper-backface-hidden .swiper-slide img {
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+}
+
+
+.banner_container .swiper-horizontal>.swiper-pagination-bullets,
+.banner_container .swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: -10px !important;
+}
+@media screen and (min-width: 243px) {
+	.banner_container .swiper-horizontal>.swiper-pagination-bullets,
+.banner_container .swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: 5px !important;
+}
+}
+
+.banner_container .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.banner_container .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	margin: 0 5px;
+	transition: 1s all;
+	
+}
+
+.banner_container .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:hover,
+.banner_container .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:hover {
+	transform: scale(1.6);
+}
+
+.banner_container .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	animation: spinnerActiveBullet 2s infinite linear;
+}
+
+@keyframes spinnerActiveBullet {
+	0% {
+		transform:scale(1.6) rotate(0deg);
+	}
+
+	50% {
+		transform:scale(1.6) rotate(180deg);
+	}
+
+	100% {
+		transform:scale(1.6) rotate(360deg);
+	}
+}
+@media screen and (min-width : 575px) {
+	.banner_container .img-box {
+		height: 250px;
+	}
+}
+
+
+@media screen and (min-width : 768px) {
+	.banner_container .img-box {
+		height: 300px;
+	}
+}
+
+@media screen and (min-width : 992px) {
+	.banner_container .img-box {
+		height: 350px;
+	}
+}
+
+@media screen and (min-width : 1199px) {
+	.banner_container .img-box {
+		height: 400px;
+	}
+} 

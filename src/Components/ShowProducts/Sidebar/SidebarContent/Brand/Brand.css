@@ -1,0 +1,152 @@
+.Brand {
+  border-bottom: 1px solid #ddd;
+}
+
+/* .Brand-container {
+  padding: 0 0 20px;
+} */
+
+.Brand-header {
+  text-align: start;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 17px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.Brand-header .plus {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.Brand-header .plus.hidden {
+  display: none;
+}
+
+.Brand-header .minus {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  box-sizing: border-box;
+  display: none;
+}
+
+.Brand-header .minus.active {
+  display: flex;
+}
+
+.Brand-Content {
+  width: 100%;
+  align-items: center;
+  display: none;
+}
+
+.Brand-Content.active {
+  display: flex;
+}
+
+.filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-Brand-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 17px 0;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  line-height: inherit;
+}
+
+.filter-Brand-item-link {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 0 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.label {
+  cursor: pointer;
+}
+
+.count {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  position: relative;
+  height: 20px;
+  margin: 0;
+  width: 20px;
+  top: 0;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #fff;
+  border: 2px solid #c3c7cc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #000;
+  opacity: 1;
+}
+
+/*  ------- Change Checkbox Style For Brand Section ------- */
+
+/* input[type="checkbox"]::after {
+  content: "\2714";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 14px;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #000;
+}
+
+input[type="checkbox"]:checked {
+  border-color: transparent;
+  background: #0e001a;
+} */
+
+
+@media screen and (min-width: 992px) {
+  .Brand-container {
+    padding: 0 0 6px;
+  }
+
+  .Brand-header {
+    padding: 10px 0;
+  }
+}
