@@ -1,0 +1,202 @@
+total-price-button.table  {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.table   th,
+.table  td {
+  padding: 7px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  text-align: start;
+}
+
+.table   th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.table tbody tr  th {
+  width: 40%;
+}
+
+
+.cart-container{
+  display: flex;
+  flex-wrap: wrap ;
+  gap: 50px;
+}
+
+.product-Buttons{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 30px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .product-Buttons{
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+.clear-box-button,
+.pay-box-button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.total-price-button{
+  width: 100%;
+  display: flex;
+}
+@media screen and (min-width: 575px) {
+  .total-price-button{
+    width: auto;
+  }
+}
+.total-price-button-text {
+   display : flex;
+   justify-content : start;
+   gap: 10px;
+  background-color : #0dcaf0 ;
+  padding : .5rem .5rem;
+  border-radius :.375rem ; 
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.clear-box-button .clear-icon
+{
+  color: #dc3545;
+  font-size: 35px;
+}
+.pay-box-button .clear-icon{
+color: #dc3545;
+  font-size: 40px;
+}
+.total-price-button .clear-icon{
+  color: #dc3545;
+  font-size: 45px;
+}
+
+.clear-box-button{
+  gap: 25px;
+}
+.pay-box-button{
+  gap: 20px;
+}
+.total-price-button{
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .clear-box-button{
+    gap: 10px;
+  }
+  .pay-box-button{
+    gap: 10px;
+  }
+  .total-price-button{
+    gap: 10px;
+  }
+  .clear-box-button button, .pay-box-button button, .total-price-button p{
+    width: max-content;
+  }
+ 
+}
+
+
+.clear-box-button  .clear-btn,
+.pay-box-button .clear-btn{
+  background-color : #0dcaf0 ;
+  font-size: 17px;
+  border: none;
+  color: #000;
+  font-weight: 500;
+}
+.clear-box-button .clear-btn:hover,
+.pay-box-button .clear-btn:hover{
+    background-color : #0dcaf0 ;
+    color: #000;
+}
+
+.pay-box-button .clear-btn{
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.clear-box-button .clear-btn{
+  padding-right: 20px;
+}
+
+
+.table-container{
+     width: 100%;
+}
+.header-text{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 380px) {
+  .header-text {
+      font-size: 25px;
+    }
+}
+
+ @media screen and (min-width : 768px) {
+  .header-text{
+  font-size: 40px;
+  font-weight: normal;
+}
+
+  .product-Buttons{
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .clear-box{
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+  }
+  
+  .total-price-button{
+    width: auto;
+    font-size: 18px;
+      font-weight: normal;
+  }
+
+.clear-box-button .clear-btn{
+    font-size: 18px;
+  }
+
+.clear-box-button .clear-icon{
+    font-size: 35 px;
+}
+
+.pay-box-button .clear-btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.clear-box-button .clear-btn {
+  padding-right: 15px;
+}
+
+} 
+
+
+
+  
+
+
+
+

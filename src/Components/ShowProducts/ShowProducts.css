@@ -1,0 +1,248 @@
+:root {
+  --content-sign: "\002B";
+  --kk-tr: #f00;
+}
+
+.page-wrapper {
+  position: relative;
+  min-height: calc(100vh - 128px);
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .page-wrapper .container {
+    width: 600px;
+  }
+}
+
+.page-wrapper .page-wrapper-content {
+  position: relative;
+}
+.page-wrapper .arrowIcon {
+  position: fixed;
+  bottom: 10%;
+  right: 17%;
+  background-color: #DDD;
+  padding: 10px;
+  line-height: 1.5px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #0d6efd;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.page-wrapper .arrowIcon.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.page-wrapper .arrowIcon.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.page-wrapper .content {
+  width: 80%;
+}
+
+
+
+
+/* ------------------------------    filter box    -----------------------------*/
+.filter {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  position: relative;
+}
+
+.filter-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.filter-sort-position {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.position-title,
+.dropdown-content {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.5px;
+}
+
+.dropdown-content {
+  color: #0d6efd;
+}
+
+.filter-sort-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-h,
+.icon-v {
+  padding: 0;
+  font-size: 30px;
+}
+
+.icon-v.hidden {
+  opacity: 0.4;
+}
+
+.icon-h {
+  opacity: 0.4;
+}
+
+.icon-h.active {
+  opacity: 1;
+}
+
+
+/* -------------------------   Width Of Card In Row   ---------------------  */
+.product-wrapper .row .border.d-flex {
+  flex: 1 0 100%;
+}
+
+@media screen and (min-width: 575px) {
+  .product-wrapper .row .border.d-flex {
+    flex: 1 0 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-wrapper .row .border.d-flex {
+    flex: 1 0 33.3%;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .product-wrapper .row .border.d-flex {
+    flex: 1 0 25%;
+  }
+}
+
+
+
+
+/* ---------------------------   SideBar   ------------------------ */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  height: 100vh;
+  background-color: rgba(0 0, 0, 0.7);
+  width: 100%;
+}
+
+.sidebar-container {
+  width: 100%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.sidebar::-webkit-scrollbar,
+.sidebar-container::-webkit-scrollbar {
+  width: 8px;
+  background-color: #DDD;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 370px) {
+  .sidebar-container {
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .sidebar-container {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page-wrapper .page-wrapper-content {
+    position: relative;
+    display: flex;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 118px;
+    width: 45%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    height: calc(100vh - 118px);
+    overflow: auto;
+    z-index: 0;
+  }
+
+  .sidebar-container {
+    width: 100%;
+
+  }
+
+  .close_Sidebar {
+    display: none;
+  }
+
+  .filter-sort-position {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1099px) {
+  .sidebar {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .sidebar {
+    width: 40%;
+  }
+
+}
+
+@media screen and (min-width: 1399px) {
+  .sidebar {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+ 
+  .sidebar.active {
+    display: flex;
+  }
+
+  .sidebar.hidden {
+    display: none;
+  }
+
+  .page-wrapper .content {
+    width: 100%;
+  }
+
+  .filter-content {
+    justify-content: space-between;
+  }
+
+  .filter-sort-position {
+    display: flex;
+  }
+}

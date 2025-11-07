@@ -1,0 +1,33 @@
+
+.section4-image-box{
+  width: 100%;
+  height: 200px;
+}
+.section4-image-box img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width : 380px) {
+  .section4-image-box{
+   height: 200px;
+  }
+}
+
+@media screen and (min-width : 575px) {
+  .section4-image-box  {
+    height: 220px;
+  }
+}
+
+@media screen and (min-width : 767px) {
+  .section4-image-box {
+    height: 300px;
+  }
+}
+@media screen and (min-width : 1199px) {
+  .section4-image-box {
+    height: 300px;
+  }
+}
