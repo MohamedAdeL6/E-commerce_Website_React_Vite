@@ -6,5 +6,5 @@ import react from '@vitejs/plugin-react'
 // repository name does not match an old hardcoded path (wrong base = 404 assets = blank page).
 export default defineConfig({
   plugins: [react()],
-  base: "./",
+  base: "/E-commerce_Website_React_Vite/",
 })
