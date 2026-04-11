@@ -1,0 +1,143 @@
+.price {
+  border-bottom: 1px solid #ddd;
+}
+.price-container {
+  padding: 0 0 15px;
+}
+/* ------------ Price Header --------- */
+.price-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 27px;
+  font-weight: 600;
+  padding: 18px 0 ;
+  cursor: pointer;
+  position: relative;
+}
+.price-header .plus {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  box-sizing: border-box;
+  display: none;
+}
+.price-header .plus.active {
+  display: flex;
+}
+.price-header .minus {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  box-sizing: border-box;
+}
+.price-header .minus.hidden {
+  display: none;
+}
+
+/* ----------- Price Content --------- */
+
+.price-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 7px;
+}
+.price-content.active {
+  display: none;
+  color: gray;
+}
+.rangeInput {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.slash{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 35px;
+  margin-bottom: 7px;
+}
+.inputMin,
+.inputMax {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inputMin input,
+.inputMax input {
+  width: 75px;
+  height: 40px;
+  padding-left: 5px;
+}
+
+/* ----- Price Content ReactSlider ------ */
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 30px;
+}
+.horizontal-slider .example-track {
+  top: 20px;
+  height: 7px;
+  border-radius: 10px;
+}
+.example-track.example-track-0 {
+  background: #DDD;
+}
+.example-track.example-track-1 {
+  background: #17a3b8;
+}
+.example-track.example-track-2 {
+  background: #DDD;
+}
+.horizontal-slider .example-thumb {
+  top: 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #17a3b8;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+@media screen  and (min-width : 280px) {
+  .rangeInput {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .slash{
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 7px;
+  }
+}
+
+ @media (min-width : 992px) {
+  .price-container {
+    padding: 0 0 20px;
+  }
+  .price-header {
+    padding: 15px 0 10px;
+  }
+}
+

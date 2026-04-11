@@ -1,0 +1,136 @@
+/* ----------------  Brand box --------------------*/
+
+.Color-container {
+	padding: 0 0 0px;
+}
+
+.Color-header {
+	text-align: start;
+	width: 100%;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 17px 0 ;
+	cursor: pointer;
+	position: relative;
+}
+
+.Color-header .plus {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	cursor: pointer;
+	color: #000;
+	box-sizing: border-box;
+	display: none;
+}
+
+.Color-header .plus.active {
+	display: flex;
+}
+
+.Color-header .minus {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	cursor: pointer;
+	color: #000;
+	box-sizing: border-box;
+}
+
+.Color-header .minus.hidden {
+	display: none;
+}
+
+.Color-Content {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 0 8px;
+}
+
+.Color-Content.active {
+	display: none;
+}
+
+.Color-content-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 11px;
+	justify-content: space-between;
+}
+
+.Color-content-item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.item-color {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+}
+
+.item-color.blue {
+	background-color: blue;
+}
+
+.item-color.black {
+	background-color: black;
+}
+
+.item-color.yellow {
+	background-color: yellow;
+}
+
+.item-color.silver {
+	background-color: silver;
+}
+
+.item-color.red {
+	background-color: red;
+}
+
+.item-color.green {
+	background-color: green;
+}
+
+.item-color.white {
+	background-color: white;
+}
+
+.item-title {
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+@media screen  and (min-width : 300px) {
+	.Color-content-item {
+		width: 45%;
+	}	
+}
+@media (min-width : 992px) {
+	.Color-header {
+	  padding: 19px 0 ;
+	}
+	.Color-content-list {
+		gap: 1px;
+	}
+	.Color-content-item.white{
+		margin-bottom: 2px;
+	}
+  }
+  @media (min-width : 1399px) {
+	.Color-content-list {
+		gap: 15px;
+	}
+
+  }

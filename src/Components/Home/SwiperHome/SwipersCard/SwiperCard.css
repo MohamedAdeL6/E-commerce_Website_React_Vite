@@ -1,0 +1,135 @@
+.card-box {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  cursor: pointer;
+  flex-direction: column;
+  /* box-shadow: 0 0 40px -12px rgba(0, 28, 70, .2); */
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  border: 1px solid #ebebebb5;
+  padding: 10px ;
+
+}
+
+.card-header-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: .75;
+  padding: 0 20px;
+}
+
+.card-header-box .offer {
+  background-color: #900101;
+  color: #fff;
+}
+
+.card-header-box .offer-icon {
+  color: #c0e3f9;
+  background-color: #900101;
+  font-size: 25px;
+  transition: .5s;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.card-header-box .offer-icon:hover {
+  transform: scale(1.2);
+}
+
+
+/* --------------------------------------------------------*/
+.card-header-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-header-content .header-text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-header-content .header-text p {
+  font-size: 15px;
+  margin: 0;
+  color: #fff;
+  background-color: #5ca800;
+  width: 75%;
+  border-radius: 17px;
+  padding: 4px ;
+  text-align: center;
+}
+
+
+
+/* --------------------------------------------------------*/
+.card-img-box {
+  margin: auto;
+  text-align: center;
+}
+
+.card-img-box img {
+  max-height: 130px;
+  display: inline-block;
+  transition: 2s;
+}
+
+.card-img-box img:hover {
+  transform: scale(1.1) rotate(-360deg);
+}
+
+
+
+/* --------------------------------------------------------*/
+.card-body-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: .35rem .75rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px 5px rgba(0, 28, 70, .2);
+
+}
+
+.card-body-title {
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.card-body-text {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+}
+
+.card-body-price {
+  display: flex;
+  justify-content: center;
+  color: #006cb7;
+  position: relative;
+  font-weight: bold;
+}
+
+.w-100.btn-content  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+@media (min-width: 400px) and  (max-width: 574px) {
+  .w-100.btn-content  {
+    justify-content: space-between;
+    padding: 7px 7px !important;
+    font-size: 12px !important;
+    gap: 0;
+  }
+}

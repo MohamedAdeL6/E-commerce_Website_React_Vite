@@ -1,0 +1,6 @@
+.section3.container .swiper-backface-hidden .swiper-slide img{
+	padding: 0;
+}
+.section3.container .swiper-slide  span::first-letter{
+	text-transform: capitalize;
+}

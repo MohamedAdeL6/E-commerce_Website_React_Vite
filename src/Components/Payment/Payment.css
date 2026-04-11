@@ -1,0 +1,280 @@
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 75px);
+}
+
+.payment_box {
+  padding: .4rem 0;
+}
+
+.payment_box .payment_image {
+  display: none;
+}
+
+.payment_box form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.input-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  width: 100%;
+  margin: .1rem 0;
+}
+
+.input-pay {
+  margin: .1rem 0;
+}
+
+.input-header-idCard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.input-content {
+  display: flex;
+  width: 100%;
+}
+
+.input-header span {
+  font-size: 9px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.input-header label {
+  width: 100%;
+  text-align: start;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.input-header .btn-edit button {
+  display: none;
+}
+
+.input-content input,
+.input-pay input {
+  border: 1px solid #ddd;
+  height: 40px;
+  border-radius: 7px;
+  width: 100%;
+  padding-left: 5px;
+}
+
+.input-content input:focus {
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.input-pay input {
+  color: #fff;
+  background-color: #0f83ff;
+}
+
+.input-content .input.idCard {
+  width: 100%;
+  background-image: url("./Payment-Image/background-input12.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.input-content .input.idCard:focus {
+  background-image: none;
+}
+
+.input-content.input-content-expireDate {
+  flex-wrap: wrap;
+}
+
+.input-content.input-content-expireDate .slash {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 7px 0;
+}
+
+.hidePassword,
+.showPassword {
+  position: absolute;
+  right: 1%;
+  top: 43%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  opacity: .8;
+  cursor: pointer;
+}
+
+@media screen and (min-width:320px) {
+  .input-header span {
+    font-size: 11px;
+  }
+}
+
+
+@media screen and (min-width:381px) {
+  .payment_box {
+    padding: 2rem 0;
+  }
+
+  .input-header span {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 574px) {
+  .payment_box {
+    padding: 2rem 0;
+  }
+
+  .input-header-idCard {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .input-header label {
+    width: max-content;
+    font-size: 18px;
+  }
+
+  .input-header span {
+    width: max-content;
+  }
+
+  .input-box {
+
+    margin: .75rem 0;
+  }
+
+  .input-pay {
+    margin: .75rem 0;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .payment {
+    height: calc(100vh - 119px);
+  }
+
+  .payment_box {
+    padding: 1rem 0;
+  }
+
+  .payment .payment_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .payment_box form {
+    width: 57%;
+    gap: 0;
+  }
+
+  .payment_box .payment_image {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .payment_box .payment_image div {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .payment_box .payment_image div img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .payment {
+    height: calc(100vh - 130px);
+  }
+
+  .payment_box {
+    padding: .5rem 0;
+  }
+
+  /* .payment_box form {
+    width: 60%;
+  }
+  .payment_box .payment_image {
+    width: 28%;
+  } */
+
+  .payment_box form {
+    width: 50%;
+  }
+
+  .payment_box .payment_image {
+    width: 35%;
+  }
+
+  .payment_box .payment_image div img {
+    width: 700px;
+    height: 535px;
+  }
+
+
+}
+
+@media screen and (min-width: 1199px) {
+  .payment_box form {
+    width: 50%;
+  }
+
+  .payment_box .payment_image {
+    width: 30%;
+  }
+
+  .payment_box .payment_image div img {
+    width: 700px;
+    height: 535px;
+  }
+
+  /* .payment_box form {
+    width: 60%;
+  }
+  .payment_box .payment_image {
+    width: 24%;
+  } */
+
+}
+
+/* @media screen and (min-width: 1399px) {
+  .payment_box form {
+    width: 50%;
+  }
+
+  .payment_box .payment_image {
+    width: 30%;
+  }
+
+  .payment_box .payment_image div img {
+    width: 700px;
+    height: 535px;
+  }
+} */
