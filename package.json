@@ -2,13 +2,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MohamedAdeL6.github.io/E-commerce_Website_React_Vite", 
+  "homepage": "https://MohamedAdeL6.github.io/E-commerce_Website_React_Vite",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm run build",     
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -20,7 +20,7 @@
     "react-icons": "^4.11.0",
     "react-inner-image-zoom": "^4.0.1",
     "react-redux": "^8.1.3",
-    "react-router-dom": "^6.16.0",
+    "react-router-dom": "^7.14.0",
     "react-slider": "^2.0.6",
     "styled-components": "^6.0.8",
     "swiper": "^11.0.4"
