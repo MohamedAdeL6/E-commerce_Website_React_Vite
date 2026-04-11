@@ -15,6 +15,35 @@ import { Link } from "react-router-dom";
 import { filterBrand } from "../../../../Store/Slices/ProductFilter";
 import { useDispatch } from "react-redux";
 
+/**
+ * Same order as Section3Images.jsx. Index-based mapping avoids:
+ * 1) `split("/")[sectionImages.length-1]` → undefined when the URL has fewer segments (crash on GitHub Pages).
+ * 2) Vite content hashes in filenames (e.g. Laptops-a1b2.webp) breaking string matches vs ProductsData categories.
+ */
+const SLIDE_FILTER_CATEGORY = [
+  "laptops",
+  "mobiles",
+  "Charges",
+  "TV",
+  "TWS",
+  "Storage",
+  "TWS",
+  "Watches",
+  "TV",
+];
+
+const SLIDE_LABELS = [
+  "Laptops",
+  "Mobiles",
+  "Charges",
+  "TV",
+  "TWS",
+  "Storage",
+  "Accessories",
+  "Watches",
+  "Best price",
+];
+
 const Section3 = () => {
   const dispatch = useDispatch();
   return (
@@ -70,28 +99,22 @@ const Section3 = () => {
       >
         <Link to="/products">
           {sectionImages.map((image, index) => {
+            const filterKey =
+              SLIDE_FILTER_CATEGORY[index] ?? "mobiles";
+            const label = SLIDE_LABELS[index] ?? "Products";
             return (
               <SwiperSlide key={index}>
-                
                 <Link
                   to="/showProduct"
                   onClick={() => {
-                    dispatch(
-                      filterBrand(
-                         image.split("/")[sectionImages.length - 1].split(".")[0] === "Acessories"
-                    ? "TWS"
-                    : (image.split("/")[sectionImages.length - 1].split(".")[0] === "BestPrice"
-                      ? "TV"
-                      : image.split("/")[sectionImages.length - 1].split(".")[0])
-                      )
-                    );
+                    dispatch(filterBrand(filterKey));
                   }}
                   className="text-decoration-none"
                 >
                   <div className="d-flex flex-column gap-3 text-center justify-content-center align-items-center">
-                    <img src={image} alt="..." width={"90%"} />
+                    <img src={image} alt={label} width={"90%"} />
                     <span className="w-100 text-cenetr text-dark fw-bold">
-                      {image.split("/")[sectionImages.length - 1].split(".")[0]}
+                      {label}
                     </span>
                   </div>
                 </Link>
