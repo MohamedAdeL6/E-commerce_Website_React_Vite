@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react'
 // Use relative base so JS/CSS load correctly on GitHub Pages even if the
 // repository name does not match an old hardcoded path (wrong base = 404 assets = blank page).
 export default defineConfig({
+  base: '/E-commerce_Website_React_Vite/',
+  build: {
+    sourcemap: true  // ← Add this
+  },
   plugins: [react()],
-  base: "/E-commerce_Website_React_Vite/",
 })
